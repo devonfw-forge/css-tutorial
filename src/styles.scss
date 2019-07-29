@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url(./assets/backgroundCSS.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0%;
+}
+
+@media only screen and (max-width: 800px) {
+    body{
+        background: none;
+    }
+}
