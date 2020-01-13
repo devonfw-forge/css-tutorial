@@ -6,7 +6,15 @@ The objective of this tutorial is to replicate the following CV using exclusivel
 
 image::assets/examples/image1.png[]
 
-To do so we will be using SCSS instead of CSS, since it is a very well-known syntax and the official for devonfw. SCSS is a set that includes CSS, so all the CSS syntax will work in a SCSS file. In addition, SCSS gives you many more functionalities and the possibility of creating variables.
+To do so we will be using SCSS instead of CSS, since it is a very well-known syntax and the official for devonfw. SCSS is a set that includes CSS, so all the CSS syntax will work in a SCSS file. In addition, SCSS gives you many more functionalities and the possibility of creating variables. In this case we will create variables for the two most used colors and font.
+
+[source, scss]
+-----------------
+$Verdana: Verdana, sans-serif;
+$Blue: #0070ae;
+$Green: #8cc63f;
+-----------------
+
 
 Create an html file
 ~~~~~~~~~~~~~~~~~~~
@@ -28,8 +36,8 @@ On our scss file we will add the class and add the properties we just mentioned:
 [source, scss]
 -----------------
 .circleImage {
-  width: 12rem;
-  height: 12rem;
+  width: 13rem;
+  height: 13rem;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -37,7 +45,7 @@ On our scss file we will add the class and add the properties we just mentioned:
 
 As you can see, we add the same width and height values to make it a square, then add the property overflow on hidden value so that the remaining piece of image is cropped out. The last property will be border-radius assigned to 50% to make it completely round.
 
-Then to center the face we will need to assign the height of the image to 100%. and add a margin-left to -25%. It must look something like this:
+Then to center the face we will need to assign the height of the image to 100% and add a margin-left to -25%. The code must look something like this:
 
 [source, scss]
 -----------------
@@ -47,15 +55,19 @@ Then to center the face we will need to assign the height of the image to 100%. 
 }
 -----------------
 
-Besides the image we can find the person’s name, their job title and some basic information. First we style the name which we have tagged with an h1 (heading 1). We will add the same properties as the example which are Verdana font, bold and size 1.5rem which corresponds to 24 pixels. The color we will comment because we haven’t added the background yet and if not we will not see the text.
+Besides the image we can find the person’s name, their job title and some basic information. 
+First we style the name which we have tagged with an h1 (heading 1). We will add the same 
+properties as the example which are Verdana font, bold and size 1.5rem which corresponds to 
+32 pixels. The color we will comment because we haven’t added the background yet and if not we will not see the text.
 
 [source, scss]
 -----------------
 h1 {
-  font-family: Verdana, sans-serif;
-  font-size: 1.5rem;
+  font-family: $Verdana;
+  font-size: 2rem;
   font-weight: bold;
-  // color: white;
+  width: max-content;
+  //color: white;
 }
 -----------------
 
@@ -64,9 +76,10 @@ For the second heading (h2), the job title, we will do the same thing according 
 [source, scss]
 -----------------
 h2 {
-  font-family: Verdana, sans-serif;
+  font-family: $Verdana;
+  font-weight: lighter;
   font-size: 1rem;
-  // color: white;
+  color: white;
 }
 -----------------
 
@@ -75,9 +88,11 @@ The next thing will be the basic information, for this we have chosen to do a ta
 [source, scss]
 -----------------
 table {
-  font-family: Verdana, sans-serif;
-  font-size: 0.75rem;
-  // color: white;
+  font-family: $Verdana;
+  font-size: 1rem;
+  //color: white;
+  padding-top: 10%;
+  width: 15rem;
 }
 
 .bold {
@@ -92,10 +107,10 @@ In side of each section we can find a title as a h3 (heading 3) element and some
 [source, scss]
 -----------------
 h3 {
-  font-family: Verdana, sans-serif;
+  font-family: $Verdana;
   font-size: 0.75rem;
   font-weight: bold;
-  color: rgb(0, 112, 174);
+  color: $Blue;
 }
 -----------------
 
@@ -106,7 +121,7 @@ Then we will have to style the p element which will be applied in the plain text
 [source, scss]
 -----------------
 p {
-  font-family: Verdana, sans-serif;
+  font-family: $Verdana;
   font-size: 0.65rem;
   text-align: justify;
 }
@@ -165,21 +180,21 @@ Then for each element inside the ‘basicInfo’ div, we will make some changes.
 [source, scss]
 -----------------
 h1 {
-  font-family: Verdana, sans-serif;
-  font-size: 1.5rem;
+  font-family: $Verdana;
+  font-size: 2rem;
   font-weight: bold;
   color: white;
   width: max-content;
-  margin-top: 0%;
 }
 
 ...
 
 table {
-  font-family: Verdana, sans-serif;
-  font-size: 0.75rem;
+  font-family: $Verdana;
+  font-size: 1rem;
   color: white;
-  padding-top: 20%;
+  padding-top: 10%;
+  width: 15rem;
 }
 -----------------
 
@@ -257,8 +272,8 @@ To do so with the header we have set a background and a border, to resemble the 
 [source, scss]
 -----------------
   header {
-    background-color: #0070ae;
-    border-bottom: 10px solid #8cc63f;
+    background-color: $Blue;
+    border-bottom: 10px solid $Green;
     display: block;
     text-align: center;
     padding-top: 5%;
