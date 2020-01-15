@@ -4,8 +4,8 @@ $Green: #8cc63f;
 
 header {
   display: inline-flex;
-  padding-left: 2%;
-  padding-top: 1%;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
 }
 
 .circleImage {
@@ -13,7 +13,8 @@ header {
   height: 13rem;
   overflow: hidden;
   border-radius: 50%;
-  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .profilePicture {
@@ -22,7 +23,7 @@ header {
 }
 
 .basicInfo {
-  padding-left: 7%;
+  padding-left: 3rem;
 }
 
 h1 {
@@ -42,7 +43,7 @@ h2 {
 
 table {
   font-family: $Verdana;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
   padding-top: 10%;
   width: 15rem;
@@ -52,11 +53,15 @@ table {
   font-weight: bold;
 }
 
+.workExp .bold {
+  padding-top: 0.5rem;
+}
+
 .bodyText {
-  margin-left: 2%;
-  margin-top: 8%;
+  margin-left: 2rem;
+  margin-top: 5rem;
   display: inline-flex;
-  width: 68%;
+  width: 70%;
 }
 
 .profile {
@@ -66,14 +71,15 @@ table {
 
 h3 {
   font-family: $Verdana;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
   color: $Blue;
+  padding-top: 1.5rem;
 }
 
 p {
   font-family: $Verdana;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   text-align: justify;
 }
 
@@ -84,27 +90,26 @@ p {
   right: 0;
   top: 0;
   height: 100%;
-  padding-left: 1%;
-  padding-top: 1%;
+  padding: 0 2rem 0 2rem;
 }
 
 .logo {
-  width: 10vw;
+  width: 10rem;
   position: absolute;
-  top: 88%;
+  top: 90%;
   right: 5%;
 }
 
 @media only screen and (max-width: 800px) {
   header {
     background-color: $Blue;
-    border-bottom: 10px solid $Green;
+    border-bottom: 0.5rem solid $Green;
     display: block;
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 5% 0 5% 0;
     margin: 0%;
   }
+
   .circleImage {
     display: inline-block;
     width: 15rem;
@@ -119,6 +124,7 @@ p {
 
   h1 {
     margin-top: 10%;
+    font-size: 1.5rem;
   }
 
   table {
@@ -131,18 +137,15 @@ p {
 
   .bodyText {
     text-align: center;
-    margin-left: 10%;
+    margin: 0 10% 10% 10%; 
     display: inline-block;
     width: 80%;
-    margin-bottom: 10%;
   }
 
   .sidebar {
     width: 80%;
     position: relative;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
+    padding: 5% 10% 0 10%;
     text-align: center;
   }
 
@@ -151,8 +154,8 @@ p {
   }
 
   .logo {
-    width: 30vw;
-    margin-top: 5%;
+    width: 40%;
+    margin: 10%;
     position: relative;
     top: 0%;
     right: 0%;
